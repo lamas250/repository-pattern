@@ -2,9 +2,8 @@
 
 namespace App\Http\Controllers;
 
-use App\Repositories\ProductRepository;
+use App\Repositories\Contracts\ProductRepositoryInterface;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\DB;
 
 class ProductController extends Controller
 {
@@ -13,7 +12,7 @@ class ProductController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index(ProductRepository $model)
+    public function index(ProductRepositoryInterface $model)
     {
         $products = $model->all();
 

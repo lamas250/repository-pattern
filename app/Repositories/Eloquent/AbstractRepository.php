@@ -1,8 +1,7 @@
 <?php
 
-namespace App\Repositories;
+namespace App\Repositories\Eloquent;
 
-use Dotenv\Repository;
 
 abstract class AbstractRepository
 {
